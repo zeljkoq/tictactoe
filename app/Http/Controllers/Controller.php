@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\AuthService;
 use App\Services\ChallengeService;
 use App\Services\GameService;
+use App\Services\TournamentService;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -25,12 +26,28 @@ class Controller extends BaseController
     {
         return new AuthService();
     }
+    
+    /**
+     * @return GameService
+     */
     public function GameService()
     {
         return new GameService();
     }
+    
+    /**
+     * @return ChallengeService
+     */
     public function ChallengeService()
     {
         return new ChallengeService();
+    }
+    
+    /**
+     * @return TournamentService
+     */
+    public function TournamentService()
+    {
+        return new TournamentService();
     }
 }

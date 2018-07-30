@@ -104,6 +104,9 @@ class GameService
         }
     }
     
+    /**
+     * @param $game_id
+     */
     public function refresh($game_id) {
         
         Takes::where(['game_id' => $game_id])->delete();

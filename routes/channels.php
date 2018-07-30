@@ -15,7 +15,7 @@ Broadcast::channel('user.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
 
-Broadcast::channel('lobby', function ($user) {
+Broadcast::channel('tournament.{id}', function ($user) {
     return ['user' => $user->name, 'id' => $user->id];
 });
 

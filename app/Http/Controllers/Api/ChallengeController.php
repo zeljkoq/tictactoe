@@ -14,7 +14,8 @@ use Illuminate\Http\Request;
 class ChallengeController extends Controller
 {
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * @return mixed
+     * @throws \App\Exceptions\Custom
      */
     public function index()
     {
@@ -23,7 +24,8 @@ class ChallengeController extends Controller
     
     /**
      * @param $challenge_id
-     * @return \Illuminate\Http\JsonResponse
+     * @return mixed
+     * @throws \App\Exceptions\Custom
      */
     public function challenge($challenge_id)
     {

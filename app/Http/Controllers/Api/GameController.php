@@ -48,6 +48,9 @@ class GameController extends Controller
         return $game;
     }
     
+    /**
+     * @param int $game_id
+     */
     public function refresh($game_id)
     {
         $takes = $this->GameService()->refresh($game_id);

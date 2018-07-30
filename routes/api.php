@@ -43,5 +43,9 @@ Route::group(['prefix' => 'v1'], function () {
         Route::group(['prefix' => 'takes'], function () {
             Route::delete('/{game_id}', 'Api\GameController@refresh')->name('game.refresh');
         });
+    
+        Route::group(['prefix' => 'tournaments'], function () {
+            Route::post('/{tournamentId}', 'Api\TournamentController@join')->name('tournament.join');
+        });
     });
 });
