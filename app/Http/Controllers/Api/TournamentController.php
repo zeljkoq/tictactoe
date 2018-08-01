@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+/**
+ * Class TournamentController
+ * @package App\Http\Controllers\Api
+ */
 class TournamentController extends Controller
 {
     /**

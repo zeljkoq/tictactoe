@@ -7,7 +7,7 @@
     "redis": {
       "host":"127.0.0.1",
       "port":6379,
-      "db":1
+      "db":2
     },
     "sqlite": {
       "databasePath": "/database/laravel-echo-server.sqlite"
@@ -15,7 +15,7 @@
   },
   "devMode": true,
   "host": null,
-  "port": "6002",
+  "port": "6003",
   "protocol": "http",
   "socketio": {},
   "sslCertPath": "",

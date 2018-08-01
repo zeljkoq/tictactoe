@@ -36,6 +36,10 @@ class ChallengeController extends Controller
         return $challenge;
     }
     
+    /**
+     * @return mixed
+     * @throws \App\Exceptions\Custom
+     */
     public function myChallenge()
     {
         $challenge = $this->ChallengeService()->myChallenge();

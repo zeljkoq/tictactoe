@@ -27,7 +27,7 @@ class GameTransformer extends \League\Fractal\TransformerAbstract
     ];
     
     /**
-     * @param Challenge $challenge
+     * @param Game $game
      * @return array
      */
     public function transform(Game $game)
@@ -39,7 +39,7 @@ class GameTransformer extends \League\Fractal\TransformerAbstract
     }
     
     /**
-     * @param Challenge $game
+     * @param Game $game
      * @return \League\Fractal\Resource\Collection
      */
     public function includeTakes(Game $game)
@@ -48,17 +48,20 @@ class GameTransformer extends \League\Fractal\TransformerAbstract
     }
     
     /**
-     * @param Challenge $challenge
+     * @param Game $game
      * @return \League\Fractal\Resource\Item
      */
     public function includeWinners(Game $game)
     {
         return $this->item($game->winners, new WinnerTransformer());
     }
-
+    
+    /**
+     * @param Game $game
+     * @return \League\Fractal\Resource\Item
+     */
     public function includeChallenge(Game $game)
     {
         return $this->item($game->challenge, new ChallengeTransformer());
     }
-    
 }

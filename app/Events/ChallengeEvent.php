@@ -13,10 +13,17 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
+/**
+ * Class ChallengeEvent
+ * @package App\Events
+ */
 class ChallengeEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     
+    /**
+     * @var
+     */
     public $challenge;
     
     /**

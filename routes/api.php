@@ -31,7 +31,7 @@ Route::group(['prefix' => 'v1'], function () {
             Route::patch('/{challenge_id}/user/{user_id}', 'Api\ChallengeController@accept')->name('challenge.accept');
             Route::post('/{challenge_id}/take', 'Api\ChallengeController@take')->name('challenge.take');
         });
-    
+        
         Route::group(['prefix' => 'games'], function () {
             Route::get('/', 'Api\GameController@index')->name('game.index');
             Route::get('/{game_id}', 'Api\GameController@game')->name('game.index');
@@ -39,11 +39,11 @@ Route::group(['prefix' => 'v1'], function () {
             Route::patch('/{game_id}', 'Api\GameController@accept')->name('game.accept');
             Route::post('/{game_id}/take', 'Api\GameController@take')->name('game.take');
         });
-    
+        
         Route::group(['prefix' => 'takes'], function () {
             Route::delete('/{game_id}', 'Api\GameController@refresh')->name('game.refresh');
         });
-    
+        
         Route::group(['prefix' => 'tournaments'], function () {
             Route::post('/{tournamentId}', 'Api\TournamentController@join')->name('tournament.join');
         });

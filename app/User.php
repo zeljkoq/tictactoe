@@ -119,7 +119,7 @@ class User extends Authenticatable implements JWTSubject
         if ($tournament->where('user_id', auth()->user()->id)->first()) {
             throw new Custom('You already joined this tournament.', '403');
         }
-    
+        
         if ($tournament->count() == 8) {
             throw new Custom('Tournament is full.', '403');
         }

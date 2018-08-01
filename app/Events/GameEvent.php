@@ -10,10 +10,17 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
+/**
+ * Class GameEvent
+ * @package App\Events
+ */
 class GameEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     
+    /**
+     * @var
+     */
     public $game;
     
     /**
